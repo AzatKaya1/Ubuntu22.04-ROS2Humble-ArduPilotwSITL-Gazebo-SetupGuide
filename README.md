@@ -268,7 +268,7 @@ cd ~/ardu_ws
 colcon build --packages-up-to ardupilot_gz_bringup
 ```
 
-If the build fails, install missing dependencies:
+**If the build fails, follow the steps below.**
 
 ```sh
 
