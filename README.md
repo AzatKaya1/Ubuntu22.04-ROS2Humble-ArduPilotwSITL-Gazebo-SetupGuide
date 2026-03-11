@@ -290,26 +290,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-
 
 ```sh
 sudo apt-get update
-```
-
-
-
-```sh
 sudo apt-get install libgz-cmake3-dev
 ```
 
 
 ```sh
-
-
-
-
-```
-```sh
-
-
-
-
+colcon build
+colcon build --packages-up-to ardupilot_gz_bringup
 ```
 
 
