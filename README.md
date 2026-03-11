@@ -21,6 +21,8 @@ wsl --install ubuntu-22.04
 ```
 2- Set Locale
 ------------------------------------------------------------------------------------------------------
+Make sure you have a locale that supports UTF-8. If you are in a minimal environment (such as a Docker container), the locale may be something minimal like POSIX. Test with the following settings:
+
 ```sh
 locale  # Check for UTF-8
 
