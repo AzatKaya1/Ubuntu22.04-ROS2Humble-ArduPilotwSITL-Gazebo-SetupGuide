@@ -338,6 +338,33 @@ To test and fly around, launch a MAVProxy instance in another terminal.
 mavproxy.py --console --map --aircraft test --master=:14550
 ```
 
+## 15. Drone Test
+First apply step 13, then open a new terminal and apply step 14. After activating your remote controller, sequentially run the commands below to visualize the drone in Gazebo and RViz.
+
+
+Computer Control Mode
+```sh
+mode GUIDED
+```
+
+Unlock the Motors
+```sh
+arm throttle
+```
+
+Take off to 10 meters
+```sh
+takeoff 10
+```
+
+Automatic Landing Mode
+```sh
+mode LAND
+```
+
+**Congratulations! You have flown your first drone :)**
+
+
 This guide should help you set up ROS 2 Humble, ArduPilot, and Gazebo Harmonic on Ubuntu 22.04. Let me know if you encounter any issues!
 
 [LinkedIn](www.linkedin.com/in/azatkaya1) (azatkaya1)
