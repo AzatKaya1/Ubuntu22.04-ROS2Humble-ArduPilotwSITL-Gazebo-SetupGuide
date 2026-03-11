@@ -125,6 +125,48 @@ ros2 run demo_nodes_py listener
 
 You should see the talker publishing messages and the listener receiving them. This verifies both the C++ and Python APIs are working properly.
 
+## 7. Set Up ArduPilot with ROS 2
+Clone the required repositories and set up the workspace.
+
+### Create Workspace and Clone Repositories
+
+```sh
+mkdir -p ~/ardu_ws/src
+cd ~/ardu_ws
+vcs import --recursive --input https://raw.githubusercontent.com/ArduPilot/ardupilot/master/Tools/ros2/ros2.repos src
+```
+
+### Update Dependencies
+
+```sh
+cd ~/ardu_ws
+sudo apt update
+sudo rosdep init
+rosdep update
+source /opt/ros/humble/setup.bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+### Install MicroXRCEDDSGen Build Dependency
+
+```sh
+cd
+sudo apt install default-jre
+cd ~/ardu_ws
+git clone --recurse-submodules https://github.com/ardupilot/Micro-XRCE-DDS-Gen.git
+cd Micro-XRCE-DDS-Gen
+./gradlew assemble
+echo "export PATH=\$PATH:$PWD/scripts" >> ~/.bashrc
+```
+
+### Test MicroXRCEDDSGen Installation
+
+```sh
+source ~/.bashrc
+cd
+microxrceddsgen -help
+```
+
 
 
 
