@@ -201,7 +201,7 @@ source /opt/ros/humble/setup.bash # You don't have to source everytime if you ha
 cd ~/ardu_ws
 colcon build --packages-up-to ardupilot_sitl
 source install/setup.bash
-ros2 launch ardupilot_sitl sitl_dds_udp.launch.py transport:=udp4 refs:=$(ros2 pkg prefix ardupilot_sitl)/share/ardupilot_sitl/config/dds_xrce_profile.xml synthetic_clock:=True wipe:=False model:=quad
+ros2 launch ardupilot_sitl sitl_dds_udp.launch.py transport:=udp4
 ```
 
 ## 10. Interact with ArduPilot via ROS 2 CLI
