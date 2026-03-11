@@ -204,10 +204,10 @@ source install/setup.bash
 ros2 launch ardupilot_sitl sitl_dds_udp.launch.py transport:=udp4
 ```
 If you encounter these errors: 
-- [ERROR] [micro_ros_agent-1]
-- [ERROR] [copter.parm -2]
+- [ERROR] [micro_ros_agent-1]:...
+- [ERROR] [copter.parm -2]:...
 
-  Run ```shsudo pip3 install MAVProxy``` and try the previous code again.
+  Run ```sudo pip3 install MAVProxy``` and try the previous code again.
   
 ## 10. Interact with ArduPilot via ROS 2 CLI
 
