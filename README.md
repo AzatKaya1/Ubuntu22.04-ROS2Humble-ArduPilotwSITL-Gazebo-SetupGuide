@@ -106,7 +106,7 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 ## 6. Test ROS 2 Installation
 
-Run the talker-listener example to verify the installation.
+Run the talker and listener example to verify the installation.
 
 ### Run C++ Talker
 
