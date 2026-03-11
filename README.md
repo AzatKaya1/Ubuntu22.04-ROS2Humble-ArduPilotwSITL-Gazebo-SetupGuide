@@ -71,9 +71,9 @@ sudo apt upgrade
 
 ### Install ROS 2 Desktop (Recommended)
 Installs the ROS 2 Humble desktop version, including:
--RViz (3D visualization tool)
--Gazebo (simulation)
--RQT, robot interfaces, and core ROS tools
+.-RViz (3D visualization tool)
+.-Gazebo (simulation)
+.-RQT, robot interfaces, and core ROS tools
 
 ```sh
 sudo apt install ros-humble-desktop
