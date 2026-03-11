@@ -7,9 +7,9 @@ First open the Windows PowerShell and install **Ubuntu 22.04**. If a different v
 ```sh
 wsl --install ubuntu-22.04
 
-## Installing, this may take a few minutes...
+##Installing, this may take a few minutes...
 Enter new UNIX username:
 New password:
-Retype new password: ##
+Retype new password:##
 
 ```
