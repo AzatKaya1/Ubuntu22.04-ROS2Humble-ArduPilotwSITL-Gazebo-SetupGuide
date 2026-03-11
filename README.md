@@ -182,7 +182,7 @@ If you encounter this error: The package name passed to `find_package_handle_sta
   to problems in calling code that expects `find_package` result variables
   (e.g., `_FOUND`) to follow a certain pattern...
 
-- Follow the instructions below and try the above code again.
+Follow the instructions below and try the above code again.
 
 ```sh
 sudo apt install python3-pip
@@ -203,7 +203,12 @@ colcon build --packages-up-to ardupilot_sitl
 source install/setup.bash
 ros2 launch ardupilot_sitl sitl_dds_udp.launch.py transport:=udp4
 ```
+If you encounter these errors: 
+- [ERROR] [micro_ros_agent-1]
+- [ERROR] [copter.parm -2]
 
+  Run sudo pip3 install MAVProxy and try the previous code again.
+  
 ## 10. Interact with ArduPilot via ROS 2 CLI
 
 Use the ROS 2 CLI to interact with ArduPilot.
