@@ -108,7 +108,7 @@ Run the talker-listener example to verify the installation.
 source /opt/ros/humble/setup.bash
 ros2 run demo_nodes_cpp talker
 ```
-#Open a new terminal. 
+Open a new terminal. 
 
 ### Run Python Listener
 
