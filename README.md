@@ -316,3 +316,28 @@ colcon build --packages-up-to ardupilot_gz_bringup
 ```sh
 colcon build --packages-up-to ardupilot_gz_bringup --allow-overriding ros_gz_bridge ros_gz_sim sdformat_urdf
 ```
+
+
+## 13. Launch Gazebo Simulation
+
+Launch the Gazebo simulation with ArduPilot.
+
+```sh
+cd ~/ardu_ws
+source install/setup.bash
+ros2 launch ardupilot_gz_bringup iris_runway.launch.py
+```
+
+This launch file starts ArduPilot SITL, Gazebo, and RViz with a single command.
+
+## 14. MAVProxy
+
+To test and fly around, launch a MAVProxy instance in another terminal.
+
+```sh
+mavproxy.py --console --map --aircraft test --master=:14550
+```
+
+This guide should help you set up ROS 2 Humble, ArduPilot, and Gazebo Harmonic on Ubuntu 22.04. Let me know if you encounter any issues!
+````
+
