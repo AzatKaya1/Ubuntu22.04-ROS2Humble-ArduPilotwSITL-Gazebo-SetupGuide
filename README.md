@@ -211,7 +211,7 @@ If you encounter these errors:
   
 ## 10. Interact with ArduPilot via ROS 2 CLI
 
-Use the ROS 2 CLI to interact with ArduPilot.
+Use the ROS 2 CLI to interact with ArduPilot. Open a new terminal and test the instructions below.
 
 ```sh
 source ~/ardu_ws/install/setup.bash
