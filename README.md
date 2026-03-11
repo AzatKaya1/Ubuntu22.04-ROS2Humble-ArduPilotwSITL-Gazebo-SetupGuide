@@ -20,7 +20,7 @@ wsl --install ubuntu-22.04
 
 ```
 # 2- Set Locale
--
+
 Make sure you have a locale that supports UTF-8. If you are in a minimal environment (such as a Docker container), the locale may be something minimal like POSIX. Test with the following settings:
 
 ```sh
@@ -34,7 +34,7 @@ export LANG=en_US.UTF-8
 locale  # Verify settings
 ```
 # 3- Setup ROS 2 Sources
--
+
 Add the ROS 2 apt repository to your system.
 
 ### Enable the Ubuntu Universe Repository
@@ -58,7 +58,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 ```
 
 ## 4. Install ROS 2 Packages
--
 
 Update your apt repository caches and install ROS 2 packages.
 ### Update and Upgrade
@@ -87,7 +86,7 @@ sudo apt install ros-dev-tools
 ```
 
 # 5- Environment Setup
--
+
 Source the ROS 2 setup script to configure your environment. This ensures that ROS is automatically loaded every time a new terminal is opened.
 
 ```sh
@@ -100,7 +99,7 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
 # 6- Test ROS 2 Installation
--
+
 Run the talker-listener example to verify the installation.
 
 ### Run C++ Talker
