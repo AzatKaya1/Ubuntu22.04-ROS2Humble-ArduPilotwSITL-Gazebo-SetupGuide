@@ -167,7 +167,31 @@ cd
 microxrceddsgen -help
 ```
 
+## 8. Build the Workspace
 
+Build the ROS 2 workspace.
+
+```sh
+cd ~/ardu_ws
+colcon build --packages-up-to ardupilot_dds_tests
+colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+
+
+```
+If you encounter this error: The package name passed to `find_package_handle_standard_args` (tinyxml2)
+  does not match the name of the calling package (TinyXML2).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern...
+
+- Follow the instructions below.
+
+```sh
+sudo apt install python3-pip
+python3 -m pip install --user pexpect
+python3 -m pip install --user future
+colcon build --packages-up-to ardupilot_dds_tests  # Repeat until no failures
+source ./install/setup.bash
+cd
+```
 
 
 
