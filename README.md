@@ -19,3 +19,50 @@ wsl --unregister Ubuntu-xx.xx
 wsl --install ubuntu-22.04
 
 ```
+2- Set Locale
+------------------------------------------------------------------------------------------------------
+```sh
+locale  # Check for UTF-8
+
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # Verify settings
+```
+3- Setup ROS 2 Sources
+------------------------------------------------------------------------------------------------------
+Add the ROS 2 apt repository to your system.
+
+### Enable the Ubuntu Universe Repository
+
+```sh
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
