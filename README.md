@@ -270,31 +270,28 @@ colcon build --packages-up-to ardupilot_gz_bringup
 
 **If the build fails with a CMake Error like "gz-cmake3", follow the steps below. We need to add the official Gazebo repository to the system.**
 
+First, install the package downloading and key-adding tools.
 ```sh
 sudo apt-get update
 sudo apt-get install lsb-release wget gnupg
 ```
 
-
+Add the official Gazebo security key (GPG key) to your system.
 ```sh
 sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 ```
 
 
-
+Add the Gazebo repository to your package list.
 ```sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 ```
 
 
-
+Now update the package lists again (so that the newly added repository is recognized) and finally reinstall the missing package.
 ```sh
 sudo apt-get update
 sudo apt-get install libgz-cmake3-dev
-```
-
-
-```sh
 colcon build
 colcon build --packages-up-to ardupilot_gz_bringup
 ```
@@ -315,7 +312,7 @@ colcon build --packages-up-to ardupilot_gz_bringup
 
 ```
 
-**And ıf you see multiple errors like c++: fatal error: Killed signal terminated program cc1plus, follow the step below.**
+**And ıf you see multiple errors like c++: fatal error: Killed signal terminated program cc1plus", follow the step below.**
 ```sh
 colcon build --packages-up-to ardupilot_gz_bringup --allow-overriding ros_gz_bridge ros_gz_sim sdformat_urdf
 ```
