@@ -12,4 +12,10 @@ wsl --install ubuntu-22.04
 #New password:
 #Retype new password:
 
+#Welcome to Ubuntu 22.04.5 LTS
+
+#If a different version is currently installed
+wsl --unregister Ubuntu-xx.xx
+wsl --install ubuntu-22.04
+
 ```
