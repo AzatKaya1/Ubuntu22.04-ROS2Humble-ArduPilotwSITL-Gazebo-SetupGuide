@@ -298,15 +298,24 @@ sudo apt-get install libgz-cmake3-dev
 colcon build
 colcon build --packages-up-to ardupilot_gz_bringup
 ```
+**If you encounter an error like "fatal error: gz/common/Console.hh: No such file or directory", follow the steps below.**
 
 
+```sh
+sudo apt install libgz-common5-dev libgz-sim8-dev
+rm -rf build/ install/ log/
+colcon build
+```
 
 
+**If you later encounter an error like "c++: fatal error: Killed signal terminated program cc1plus", follow the step below.**
+```sh
 
+colcon build --packages-up-to ardupilot_gz_bringup
 
+```
 
-
-
-
-
-
+**And ıf you see multiple errors like c++: fatal error: Killed signal terminated program cc1plus, follow the step below.**
+```sh
+colcon build --packages-up-to ardupilot_gz_bringup --allow-overriding ros_gz_bridge ros_gz_sim sdformat_urdf
+```
