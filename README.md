@@ -230,6 +230,54 @@ param set DDS_ENABLE 1
 
 Ensure the ArduPilot parameter `DDS_DOMAIN_ID` matches your environment variable `ROS_DOMAIN_ID`. The default is 0 for ArduPilot.
 
+## 11. Install Gazebo
+
+Install Gazebo Harmonic (recommended) or Gazebo Garden.
+
+### Clone Required Repositories
+
+```sh
+cd ~/ardu_ws
+vcs import --input https://raw.githubusercontent.com/ArduPilot/ardupilot_gz/main/ros2_gz.repos --recursive src
+```
+
+### Set Gazebo Version
+
+Set the Gazebo version in your `~/.bashrc` file.
+
+```sh
+export GZ_VERSION=harmonic
+```
+
+### Update ROS Dependencies
+
+```sh
+cd ~/ardu_ws
+source /opt/ros/humble/setup.bash
+sudo apt update
+rosdep update
+rosdep install --from-paths src --ignore-src -r
+```
+
+## 12. Build and Run Tests
+
+Build the workspace and run tests.
+
+```sh
+cd ~/ardu_ws
+colcon build --packages-up-to ardupilot_gz_bringup
+```
+
+If the build fails, install missing dependencies:
+
+```sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl -y
+curl -sSL https://get.gazebosim.org | sh
+sudo apt install libgz-cmake3-dev libgz-common5-dev libgz-sim8-dev libgz-math7-dev libgz-msgs10-dev libgz-transport13-dev libgz-tools2-dev libgz-utils2-dev
+sudo apt install gz-cmake3
+colcon build --packages-up-to ardupilot_gz_bringup --allow-overriding ardupilot_msgs ardupilot_sitl # Keep doing it until it gives no failure errors
+```
 
 
 
