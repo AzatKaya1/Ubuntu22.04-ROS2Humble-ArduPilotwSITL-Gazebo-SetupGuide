@@ -57,10 +57,10 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 ```
 
-## 3. Install ROS 2 Packages
+4. Install ROS 2 Packages
+------------------------------------------------------------------------------------------------------
 
 Update your apt repository caches and install ROS 2 packages.
-
 ### Update and Upgrade
 
 ```sh
@@ -86,8 +86,8 @@ sudo apt install ros-humble-ros-base
 sudo apt install ros-dev-tools
 ```
 
-## 4. Environment Setup
-
+5. Environment Setup
+------------------------------------------------------------------------------------------------------
 Source the ROS 2 setup script to configure your environment.
 
 ```sh
@@ -99,8 +99,8 @@ source /opt/ros/humble/setup.bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
-## 5. Test ROS 2 Installation
-
+6. Test ROS 2 Installation
+------------------------------------------------------------------------------------------------------
 Run the talker-listener example to verify the installation.
 
 ### Run C++ Talker
