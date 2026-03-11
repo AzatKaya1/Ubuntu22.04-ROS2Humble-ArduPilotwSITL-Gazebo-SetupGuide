@@ -207,7 +207,7 @@ If you encounter these errors:
 - [ERROR] [micro_ros_agent-1]
 - [ERROR] [copter.parm -2]
 
-  Run sudo pip3 install MAVProxy and try the previous code again.
+  Run ```shsudo pip3 install MAVProxy``` and try the previous code again.
   
 ## 10. Interact with ArduPilot via ROS 2 CLI
 
