@@ -7,16 +7,16 @@ First open the Windows PowerShell and install **Ubuntu 22.04**. If a different v
 ```sh
 wsl --install ubuntu-22.04
 
-#Installing, this may take a few minutes...
-#Enter new UNIX username:
-#New password:
-#Retype new password:
+# Installing, this may take a few minutes...
+# Enter new UNIX username:
+# New password:
+# Retype new password:
 .
 .
 .
-#Welcome to Ubuntu 22.04.5 LTS
+# Welcome to Ubuntu 22.04.5 LTS
 
-#If a different version is currently installed
+# If a different version is currently installed
 wsl --unregister Ubuntu-xx.xx
 wsl --install ubuntu-22.04
 
