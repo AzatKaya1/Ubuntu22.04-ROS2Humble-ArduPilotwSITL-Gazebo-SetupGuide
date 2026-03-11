@@ -232,7 +232,7 @@ Ensure the ArduPilot parameter `DDS_DOMAIN_ID` matches your environment variable
 
 ## 11. Install Gazebo
 
-Install Gazebo Harmonic (recommended) or Gazebo Garden.
+Install Gazebo Harmonic (recommended) or Gazebo Garden. We will install Harmonic.
 
 ### Clone Required Repositories
 
