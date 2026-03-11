@@ -182,7 +182,7 @@ If you encounter this error: The package name passed to `find_package_handle_sta
   to problems in calling code that expects `find_package` result variables
   (e.g., `_FOUND`) to follow a certain pattern...
 
-- Follow the instructions below.
+- Follow the instructions below and try the above code again.
 
 ```sh
 sudo apt install python3-pip
