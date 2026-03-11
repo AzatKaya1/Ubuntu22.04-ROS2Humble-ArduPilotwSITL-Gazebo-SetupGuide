@@ -268,19 +268,49 @@ cd ~/ardu_ws
 colcon build --packages-up-to ardupilot_gz_bringup
 ```
 
-**If the build fails, follow the steps below.**
+**If the build fails, follow the steps below. We need to add the official Gazebo repository to the system.**
 
 ```sh
+sudo apt-get update
+sudo apt-get install lsb-release wget gnupg
+```
 
+
+```sh
+sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 ```
 
 
 
+```sh
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+```
+
+
+
+```sh
+sudo apt-get update
+```
+
+
+
+```sh
+sudo apt-get install libgz-cmake3-dev
+```
+
+
+```sh
 
 
 
 
+```
+```sh
 
+
+
+
+```
 
 
 
