@@ -63,7 +63,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 Update your apt repository caches and install ROS 2 packages.
 ### Update and Upgrade
-
+Updates and upgrades the package lists.
 ```sh
 sudo apt update
 sudo apt upgrade
