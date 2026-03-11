@@ -192,6 +192,38 @@ colcon build --packages-up-to ardupilot_dds_tests  # Repeat until no failures
 source ./install/setup.bash
 cd
 ```
+## 9. Launch ArduPilot SITL
+
+Launch the ArduPilot SITL simulation.
+
+```sh
+source /opt/ros/humble/setup.bash # You don't have to source everytime if you have added to bash file 
+cd ~/ardu_ws
+colcon build --packages-up-to ardupilot_sitl
+source install/setup.bash
+ros2 launch ardupilot_sitl sitl_dds_udp.launch.py transport:=udp4 refs:=$(ros2 pkg prefix ardupilot_sitl)/share/ardupilot_sitl/config/dds_xrce_profile.xml synthetic_clock:=True wipe:=False model:=quad
+```
+
+## 10. Interact with ArduPilot via ROS 2 CLI
+
+Use the ROS 2 CLI to interact with ArduPilot.
+
+```sh
+source ~/ardu_ws/install/setup.bash
+ros2 node list
+ros2 node info /ap
+ros2 topic echo /ap/geopose/filtered
+```
+
+If ROS 2 topics aren’t being published, ensure the ArduPilot parameter `DDS_ENABLE` is set to 1 and reboot the launch.
+
+```sh
+export PATH=$PATH:~/ardu_ws/src/ardupilot/Tools/autotest
+sim_vehicle.py -w -v ArduPlane --console -DG --enable-dds
+param set DDS_ENABLE 1
+```
+
+Ensure the ArduPilot parameter `DDS_DOMAIN_ID` matches your environment variable `ROS_DOMAIN_ID`. The default is 0 for ArduPilot.
 
 
 
