@@ -88,7 +88,7 @@ sudo apt install ros-dev-tools
 
 5- Environment Setup
 -
-Source the ROS 2 setup script to configure your environment.
+Source the ROS 2 setup script to configure your environment. This ensures that ROS is automatically loaded every time a new terminal is opened.
 
 ```sh
 # Replace ".bash" with your shell if you're not using bash
