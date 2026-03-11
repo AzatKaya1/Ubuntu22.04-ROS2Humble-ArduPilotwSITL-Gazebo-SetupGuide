@@ -339,5 +339,5 @@ mavproxy.py --console --map --aircraft test --master=:14550
 ```
 
 This guide should help you set up ROS 2 Humble, ArduPilot, and Gazebo Harmonic on Ubuntu 22.04. Let me know if you encounter any issues!
-````
+
 
