@@ -4,5 +4,5 @@ This guide explains the step-by-step process of installing and configuring ROS 2
 1- Install Ubuntu 22.04
 ------------------------------------------------------------------------------------------------------
 
-Install **Ubuntu 22.04**. If a different version is currently installed, follow the instructions below.
-First open the Windows Powershall and
+First open the Windows PowerShell and install **Ubuntu 22.04**. If a different version is currently installed, follow the instructions below.
+
