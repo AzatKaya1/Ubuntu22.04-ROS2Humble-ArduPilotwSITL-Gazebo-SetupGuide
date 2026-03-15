@@ -1,0 +1,10 @@
+First open a new terminal. Open Gazebo and RViz
+
+
+```sh
+
+cd ~/ardu_ws
+source install/setup.bash
+ros2 launch ardupilot_gz_bringup iris_runway.launch.py
+
+```
