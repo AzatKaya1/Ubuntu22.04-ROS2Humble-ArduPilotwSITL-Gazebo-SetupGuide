@@ -338,7 +338,7 @@ To test and fly around, launch a MAVProxy instance in another terminal.
 mavproxy.py --console --map --aircraft test --master=:14550
 ```
 
-## 15. Drone Test
+## 15. Drone Testing
 First apply step 13, then open a new terminal and apply step 14. After activating your remote controller, sequentially run the commands below to visualize the drone in Gazebo and RViz.
 
 
