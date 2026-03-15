@@ -1,10 +1,11 @@
-First open a new terminal. Open Gazebo and RViz
+### Start Gazebo and RViz
 
+First, open a new terminal.
 
-```sh
+Then run the following commands to start Gazebo and RViz:
 
+```bash
 cd ~/ardu_ws
 source install/setup.bash
 ros2 launch ardupilot_gz_bringup iris_runway.launch.py
-
 ```
